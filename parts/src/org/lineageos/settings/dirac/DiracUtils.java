@@ -136,5 +136,11 @@ public final class DiracUtils {
 
     protected void setHeadsetType(int paramInt) {
          mDiracSound.setHeadsetType(paramInt);
+
+
+public final class DiracUtils {
+
+    protected static boolean isDiracEnabled(Context context) {
+        return false;
     }
 }
