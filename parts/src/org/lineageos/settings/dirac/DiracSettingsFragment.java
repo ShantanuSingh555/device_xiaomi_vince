@@ -70,7 +70,6 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mHeadsetType.setOnPreferenceChangeListener(this);
         mHeadsetType.setEnabled(enhancerEnabled);
 
-
         // TODO: adapt to real values
         String[] headsetEntries = new String[] {
             getString(R.string.dirac_headset_0),
@@ -86,18 +85,6 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mPreset = (ListPreference) findPreference(PREF_PRESET);
         mPreset.setOnPreferenceChangeListener(this);
         mPreset.setEnabled(enhancerEnabled);
-        // TODO: adapt to real values
-        String[] presetEntries = new String[] {
-            getString(R.string.dirac_preset_0),
-            getString(R.string.dirac_preset_1),
-            getString(R.string.dirac_preset_2),
-            getString(R.string.dirac_preset_3)
-        };
-        String[] presetValues = new String[] {
-            "0", "1", "2", "3"
-        };
-        mPreset.setEntries(presetEntries);
-        mPreset.setEntryValues(presetValues);
     }
 
     @Override
@@ -135,15 +122,16 @@ public class DiracSettingsFragment extends PreferenceFragment implements
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         switch (preference.getKey()) {
             case PREF_HEADSET:
-
                 mDiracUtils.setHeadsetType(Integer.parseInt(newValue.toString()));
                 return true;
             case PREF_PRESET:
                 mDiracUtils.setLevel(String.valueOf(newValue));
                 // TODO: on Headset changed
+                DiracUtils.setHeadsetType(Integer.parseInt(newValue.toString()));
+
                 return true;
             case PREF_PRESET:
-                // TODO: on Preset changed
+                DiracUtils.setLevel(String.valueOf(newValue));
                 return true;
             default: return false;
         }
@@ -175,6 +163,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mHeadsetType.setEnabled(enabled);
         mPreset.setEnabled(enabled);
         // TODO: Toggle enhancer
+        DiracUtils.setMusic(isChecked);
         mTextView.setText(getString(isChecked ? R.string.switch_bar_on : R.string.switch_bar_off));
         mSwitchBar.setActivated(isChecked);
 
