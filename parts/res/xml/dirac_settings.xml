@@ -29,9 +29,6 @@
         android:entries="@array/dirac_preset_pref_entries"
         android:entryValues="@array/dirac_preset_pref_values"
         android:defaultValue="0"
-        android:entries="@array/dirac_preset_pref_entries"
-        android:entryValues="@array/dirac_preset_pref_values"
-        android:defaultValue="0,0,0,0,0,0,0"
         android:title="@string/dirac_preset_title"
         android:summary="%s" />
 
