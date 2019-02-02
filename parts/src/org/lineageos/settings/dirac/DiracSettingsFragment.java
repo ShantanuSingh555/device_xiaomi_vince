@@ -63,7 +63,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mDiracUtils = new DiracUtils(getContext());
 
         boolean enhancerEnabled = mDiracUtils.isDiracEnabled();
-        boolean enhancerEnabled = DiracUtils.isDiracEnabled(getActivity());
+        boolean enhancerEnabled = DiracUtils.isDiracEnabled();
 
 
         mHeadsetType = (ListPreference) findPreference(PREF_HEADSET);
@@ -101,7 +101,8 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         super.onViewCreated(view, savedInstanceState);
 
         boolean enhancerEnabled = mDiracUtils.isDiracEnabled();
-        boolean enhancerEnabled = DiracUtils.isDiracEnabled(getActivity());
+        boolean enhancerEnabled = DiracUtils.isDiracEnabled();
+
 
         mTextView = view.findViewById(R.id.switch_text);
         mTextView.setText(getString(enhancerEnabled ?
@@ -163,7 +164,7 @@ public class DiracSettingsFragment extends PreferenceFragment implements
         mHeadsetType.setEnabled(enabled);
         mPreset.setEnabled(enabled);
         // TODO: Toggle enhancer
-        DiracUtils.setMusic(isChecked);
+        DiracUtils.setEnabled(isChecked);
         mTextView.setText(getString(isChecked ? R.string.switch_bar_on : R.string.switch_bar_off));
         mSwitchBar.setActivated(isChecked);
 
