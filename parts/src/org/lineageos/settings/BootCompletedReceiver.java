@@ -36,7 +36,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
 
         new DiracUtils(context).onBootCompleted();
 
-        DiracUtils.initialize(context);
+        new DiracUtils(context);
         DozeUtils.checkDozeService(context);
     }
 }
