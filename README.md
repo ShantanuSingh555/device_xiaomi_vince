@@ -1,4 +1,5 @@
 This repository contains device configuration for Xiaomi Redmi 5 Plus (vince)
+This Branch is only for GZOSP BASED ROM
 
 Basic   | Spec Sheet
 -------:|:----------
