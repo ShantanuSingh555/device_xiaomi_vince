@@ -1,4 +1,5 @@
-This repository contains device configuration for Xiaomi Redmi 5 Plus (vince)
+This repository contains device configuration for Xiaomi Redmi 5 Plus (vince).
+This Branch is Only For Build with kernel 4.9.
 
 Basic   | Spec Sheet
 -------:|:----------
