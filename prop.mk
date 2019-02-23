@@ -247,5 +247,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
     
-#Maintainer
-ro.cerberus.maintainer=ShantanuSingh555
+
