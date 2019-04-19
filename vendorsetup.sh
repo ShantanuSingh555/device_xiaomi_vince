@@ -1,1 +1,1 @@
-add_lunch_combo cerberus_vince-userdebug
+add_lunch_combo pearl_vince-userdebug
