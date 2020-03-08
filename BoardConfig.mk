@@ -30,6 +30,8 @@ DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 TARGET_QCOM_AUDIO_VARIANT := caf-msm8996
 TARGET_QCOM_MEDIA_VARIANT := caf-msm8996
 TARGET_QCOM_DISPLAY_VARIANT := caf-msm8996
+DISABLE_EAP_PROXY := true
+AUDIO_FEATURE_ENABLED_SND_MONITOR := true
 
 # Kernel
 TARGET_KERNEL_CONFIG := vince_defconfig
@@ -49,6 +51,7 @@ VENDOR_SECURITY_PATCH := 2019-03-05
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+TARGET_EXCLUDE_QCOM_SEPOLICY := true
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/vince/BoardConfigVendor.mk
