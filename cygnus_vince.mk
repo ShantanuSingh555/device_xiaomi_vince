@@ -18,11 +18,12 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-# Inherit from vince device
-$(call inherit-product, device/xiaomi/vince/device.mk)
-
 # Inherit some common cgynus stuff.
 $(call inherit-product, vendor/cygnus/configs/common.mk)
+$(call inherit-product, device/qcom/common/common.mk)
+
+# Inherit from vince device
+$(call inherit-product, device/xiaomi/vince/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vince
